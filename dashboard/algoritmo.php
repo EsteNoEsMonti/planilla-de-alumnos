@@ -88,18 +88,17 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
     <select class="form-control" id="curso">
       <option>Algoritmo</option>
     </select>
-  </div>		
-				 <div class="form-group">
+  </div>		<div class="form-group">
                 <label for="tp1" class="col-form-label">Trabajo Practico N1:</label>
-                <input type="number" value ="0" class="form-control" id="tp1">
+                <input type="number" min="0" max="10" class="form-control" id="tp1"> 
                 </div>
 				<div class="form-group">
                 <label for="tp2" class="col-form-label">Trabajo Practico N2:</label>
-                <input type="number" value ="0" class="form-control" id="tp2">
+                <input type="number" min="0" max="10" class="form-control" id="tp2">
                 </div>
 				<div class="form-group">
                 <label for="nf" class="col-form-label">Nota Final:</label>
-                <input type="number" value ="0" class="form-control" id="nf">
+                <input type="number" min="0" max="10"class="form-control" id="nf">
                 </div>
 			
             </div>

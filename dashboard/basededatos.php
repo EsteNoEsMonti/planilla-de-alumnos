@@ -28,6 +28,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                                 <th>Nombre</th>
                                 <th>Apellido</th>                                
                                 <th>Fecha Nac</th>
+								<th>Curso</th>
 								<th>Tp1</th>
 								<th>Tp2</th>
 								<th>NotaFinal</th>
@@ -42,7 +43,8 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                                 <td><?php echo $dat['id'] ?></td>
                                 <td><?php echo $dat['nombre'] ?></td>
                                 <td><?php echo $dat['apellido'] ?></td>
-                                <td><?php echo $dat['fnac'] ?></td> 
+                                <td><?php echo $dat['fnac'] ?></td>
+								<td><?php echo $dat['curso'] ?></td>
 								<td><?php echo $dat['tp1'] ?></td>
 								<td><?php echo $dat['tp2'] ?></td>
 								<td><?php echo $dat['nf'] ?></td>
@@ -81,18 +83,23 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                 <label for="fnac" class="col-form-label">Fecha de Nacimiento:</label>
                 <input type="date" class="form-control" id="fnac">
                 </div>
-				
+				<div class="form-group">
+    <label for="curso">Materias</label>
+    <select class="form-control" id="curso">
+      <option>Base de Datos</option>
+    </select>
+  </div>		
 				 <div class="form-group">
                 <label for="tp1" class="col-form-label">Trabajo Practico N1:</label>
-                <input type="text" value ="0" class="form-control" id="tp1">
+                <input type="number" min="0" max="10" class="form-control" id="tp1"> 
                 </div>
 				<div class="form-group">
                 <label for="tp2" class="col-form-label">Trabajo Practico N2:</label>
-                <input type="text" value ="0" class="form-control" id="tp2">
+                <input type="number" min="0" max="10" class="form-control" id="tp2">
                 </div>
 				<div class="form-group">
                 <label for="nf" class="col-form-label">Nota Final:</label>
-                <input type="text" value ="0" class="form-control" id="nf">
+                <input type="number" min="0" max="10"class="form-control" id="nf">
                 </div>
 			
             </div>
