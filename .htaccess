@@ -1,0 +1,5 @@
+php_value display_errors 1
+php_value display_startup_errors 1
+php_value max_execution_time 30
+php_value max_input_vars 1000
+php_value post_max_size 20M

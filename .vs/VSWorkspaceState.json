@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\dashboard",
+    "\\dashboard\\vendor",
+    "\\dashboard\\vendor\\datatables",
+    "\\dashboard\\vendor\\fontawesome-free",
+    "\\dashboard\\vendor\\jquery",
+    "\\dashboard\\vendor\\jquery-easing",
+    "\\dashboard\\vistas"
+  ],
+  "SelectedNode": "\\dashboard\\vendor\\jquery\\jquery.slim.min.js",
+  "PreviewInSolutionExplorer": false
+}
