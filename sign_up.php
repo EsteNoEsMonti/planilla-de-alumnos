@@ -17,32 +17,37 @@
     
     <body>
      
-      <div class="container-login">
+      <div class="container-login" id="modalCRUD">
         <div class="wrap-login">
-            <form class="login-form validate-form" id="formLogin" action="" method="post">
-                <span class="login-form-title">USUARIO</span>
+            <form class="login-form validate-form" id="formSign" action="" method="post">
+                <span class="login-form-title">REGISTRARSE</span>
                 
                 <div class="wrap-input100" data-validate = "Usuario incorrecto">
-                    <input class="input100" type="text" id="usuario" name="usuario" placeholder="Usuario">
-                    <span class="focus-efecto"></span>
+                <input class="input100" type="text" id="usuario" name="usuario" placeholder="Ingrese su Usuario">
+                <span class="focus-efecto"></span>
                 </div>
                 
                 <div class="wrap-input100" data-validate="Password incorrecto">
-                    <input class="input100" type="password" id="password" name="password" placeholder="Password">
-                    <span class="focus-efecto"></span>
+                <input class="input100" type="password" id="password" name="password" placeholder="Ingrese Password">
+                <span class="focus-efecto"></span>
+                </div>
+                
+                <div class="wrap-input100" data-validate="Password incorrecto">
+                <input class="input100" type="password" id="passwordRepit" name="passwordRepit" placeholder="Repetir su Password">
+                <span class="focus-efecto"></span>
                 </div>
                 
                 <div class="container-login-form-btn">
                     <div class="wrap-login-form-btn">
-                        <div class="login-form-bgbtn"></div>
-                        <button type="submit" name="submit" class="login-form-btn">CONECTAR</button>
+                    <div class="login-form-bgbtn"></div>
+                    <button type="submit" id="btnGuardar" class="login-form-btn">Registrarme</button>
                     </div>
-                </div>
+                    </div>
                 <div class="Sign-form-btn mt-2">
                         <div class="login-form-bgbtn"></div>
                         <?php
-                        $href="http://localhost/sign_up.php";
-                        $nombr="Registrarme";
+                        $href="http://localhost/";
+                        $nombr="Volver";
                         $class="login-form-btn";
                         echo "<a href='".$href."' class='".$class."'>".$nombr."</a>";
                         ?>
@@ -57,6 +62,7 @@
      <script src="popper/popper.min.js"></script>    
         
      <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>    
-     <script src="codigo.js"></script>    
+     <!-- <script src="codigo.js"></script>     -->
+     <script type="text/javascript" src="codigoForSign.js"></script>  
     </body>
 </html>

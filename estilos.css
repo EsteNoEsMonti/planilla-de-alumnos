@@ -254,3 +254,13 @@ button:hover {
     padding: 77px 15px 33px 15px;
   }
 }
+
+.Sign-form-btn {
+  width: 60%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 50px 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
