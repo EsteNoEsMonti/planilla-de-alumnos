@@ -38,6 +38,15 @@
                         <button type="submit" name="submit" class="login-form-btn">CONECTAR</button>
                     </div>
                 </div>
+                <div class="Sign-form-btn mt-2">
+                        <div class="login-form-bgbtn"></div>
+                        <?php
+                        $href="http://localhost/sign_up.php";
+                        $nombr="Registrarme";
+                        $class="login-form-btn";
+                        echo "<a href='".$href."' class='".$class."'>".$nombr."</a>";
+                        ?>
+                </div>
             </form>
         </div>
     </div>     
