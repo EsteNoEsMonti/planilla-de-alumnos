@@ -28,7 +28,7 @@
                     if(data == "null"){
                         Swal.fire({
                             type:'error',
-                            title:'No se Pudo registrar Eroor al guardar',
+                            title:'El usuario ya esta utilizado',
                         });
                     }else{
                         Swal.fire({
@@ -45,7 +45,6 @@
                     }
                 }        
             });
-            $("#modalCRUD").modal("hide");
         }    
 });    
     
