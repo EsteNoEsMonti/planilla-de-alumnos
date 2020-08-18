@@ -1,9 +1,10 @@
 <?php
 session_start();
 $ID =$_SESSION["s_id"];
-include_once '../bd/conexion.php';
+include_once '../bd/conexion.php'; //hace un obj de esta clase xd
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
+
 // Recepción de los datos enviados mediante POST desde el JS   
 $id = (isset($_POST['id'])) ? $_POST['id'] : '';
 $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
@@ -15,7 +16,7 @@ $tp2 = (isset($_POST['tp2'])) ? $_POST['tp2'] : '';
 $nf = (isset($_POST['nf'])) ? $_POST['nf'] : '';
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
-session_start();
+// session_start();
 $_SESSION["s_usuario"];
 
 switch($opcion){
