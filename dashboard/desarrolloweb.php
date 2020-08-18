@@ -5,11 +5,12 @@
     <h1>Instituto San Martin: Desarrollo Web</h1>
     
 <?php
+session_start();
+$ID =$_SESSION["s_id"];
 include_once 'conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
-
-$consulta = "SELECT id, nombre, apellido, fnac, curso , tp1 , tp2 , nf FROM personas WHERE curso = 'Desarrollo Web'";
+$consulta = "SELECT id, nombre, apellido, fnac, curso , tp1 , tp2 , nf FROM personas WHERE curso = 'Desarrollo Web' AND usuario_id = '$ID'";
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $data=$resultado->fetchAll(PDO::FETCH_ASSOC);

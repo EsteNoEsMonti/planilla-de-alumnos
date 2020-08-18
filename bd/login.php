@@ -15,8 +15,16 @@ $consulta = "SELECT * FROM usuarios WHERE usuario='$usuario' AND password='$pass
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 
+$consulta2 = "SELECT * FROM usuarios WHERE usuario='$usuario'";
+$resultado2 = $conexion->prepare($consulta2);
+$resultado2->execute();
+
 if($resultado->rowCount() >= 1){
     $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+    $data2 = $resultado2->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($data2 as $key) {
+      $_SESSION["s_id"] = $key['id'];
+    }
     $_SESSION["s_usuario"] = $usuario;
 }else{
     $_SESSION["s_usuario"] = null;
