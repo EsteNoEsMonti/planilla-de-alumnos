@@ -7,11 +7,12 @@
     
     
  <?php
+ session_start();
+ $ID =$_SESSION["s_id"];
 include_once 'bd/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
-
-$consulta = "SELECT id, nombre, apellido, fnac, curso , tp1 , tp2 , nf FROM personas";
+$consulta = "SELECT id, nombre, apellido, fnac, curso , tp1 , tp2 , nf FROM personas WHERE usuario_id = '$ID' ";
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $data=$resultado->fetchAll(PDO::FETCH_ASSOC);

@@ -1,4 +1,6 @@
 <?php
+session_start();
+$ID =$_SESSION["s_id"];
 include_once '../bd/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
@@ -13,10 +15,13 @@ $tp2 = (isset($_POST['tp2'])) ? $_POST['tp2'] : '';
 $nf = (isset($_POST['nf'])) ? $_POST['nf'] : '';
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
+session_start();
+$_SESSION["s_usuario"];
 
 switch($opcion){
     case 1: //alta
-        $consulta = "INSERT INTO personas (nombre, apellido, fnac, curso, tp1, tp2, nf) VALUES('$nombre', '$apellido', '$fnac', '$curso', '$tp1', '$tp2', '$nf') ";			
+        
+        $consulta = "INSERT INTO personas (nombre, apellido, fnac, curso, tp1, tp2, nf, usuario_id) VALUES('$nombre', '$apellido', '$fnac', '$curso', '$tp1', '$tp2', '$nf', '$ID') ";			
         $resultado = $conexion->prepare($consulta);
         $resultado->execute(); 
 
